@@ -1,0 +1,14 @@
+[3BB_GOLF_USAGE]
+EVENTID=128
+SRC_PATH=/users/settoper/settsource/SS_Filter/CPD/src/128/
+DATA_PATH=/users/settoper/settsource/SS_Filter/CPD/src/128/
+DST_PATH=/users/settoper/settsource/SS_Filter/CPD/dest/128/
+LOG_PATH=/users/settoper/settsource/SS_Filter/CPD/log/128/
+ERR_PATH=/users/settoper/settsource/SS_Filter/CPD/err/128/
+SYNC=0
+KWORD=3bb_golf_usage
+TWORD=csv
+DTM_START=+15
+DTM_LENGTH=8
+DTM_FORMAT=YYYYMMDD
+CDR_CATEGORY=NORMAL

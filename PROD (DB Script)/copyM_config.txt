@@ -1,0 +1,12 @@
+[golf_channel]
+PROCESS=3BB_VDO_PAYMENT
+CUR_PATH=/users/settoper/ssprocess
+FILE_LOAD_SOURCE_PATH=/users/settoper/ssdata/golf_channel/src
+FILE_LOAD_DST_PATH=/users/settoper/ssdata/golf_channel/dest
+FILE_LOAD_LOG_PATH=/users/settoper/ssdata/golf_channel/log
+SYNC=0
+KWORD=3bb_golf_payment_
+TWORD=csv
+DTM_START=+18
+DTM_LENGTH=8
+DTM_FORMAT=YYYYMMDD
