@@ -1354,22 +1354,10 @@ BEGIN
                                   AND C.CDR_FILENAME='''||V_FILE_NAME||''' AND C.CDR_STATUS='''||V_STATUS||'''
                                   AND C.ROWID ='''||V_ROWID||''' '  ;
                   ELSE
-                      IF IN_CDR_TYPE = '128' THEN
-                        --max 29/04/2025   
-                        V_QUERY_MAP := V_QUERY_MAP || ' FROM ' || V_TABLE_NAME || ' C, SS_EE_VAS V,SS_EE_VAS_TARIFF T '
-                                  || ' WHERE V.SERVICE_TYPE = ''' || V_VAS_SERVICE_TYPE || ''' '
-                                  || ' AND C.CDR_FILENAME = ''' || V_FILE_NAME || ''' '
-                                  || ' AND C.CDR_STATUS = ''' || V_STATUS || ''' '
-                                  || ' AND C.ROWID = ''' || V_ROWID || ''' '
-                                  || ' AND V.VAS_NO = T.VAS_NO '
-                                  || ' AND T.SHARING_FLAG = ''AP'' '; 
-                      ELSE
-                        /**** end edit by chanutso - 20230628 ****/ 
-                        V_QUERY_MAP := V_QUERY_MAP||' FROM '||V_TABLE_NAME||' C, SS_EE_VAS V  WHERE V.SERVICE_TYPE='''||V_VAS_SERVICE_TYPE||''' 
-                                    AND C.CDR_FILENAME='''||V_FILE_NAME||''' AND C.CDR_STATUS='''||V_STATUS||'''
-                                    AND C.ROWID ='''||V_ROWID||''' '  ;   
-                      END IF;
-                                   
+                      /**** end edit by chanutso - 20230628 ****/ 
+                      V_QUERY_MAP := V_QUERY_MAP||' FROM '||V_TABLE_NAME||' C, SS_EE_VAS V  WHERE V.SERVICE_TYPE='''||V_VAS_SERVICE_TYPE||''' 
+                                  AND C.CDR_FILENAME='''||V_FILE_NAME||''' AND C.CDR_STATUS='''||V_STATUS||'''
+                                  AND C.ROWID ='''||V_ROWID||''' '  ;              
                   END IF;
 
                   
@@ -1401,9 +1389,9 @@ BEGIN
                   commit;*/
                   
                   /**** edit by max - 04/04/2024 ****/   
-                  /*IF IN_CDR_TYPE = '127' THEN
+                  IF IN_CDR_TYPE = '127' THEN
                     V_QUERY_MAP := V_QUERY_MAP||' AND V.VAS_NO = T.VAS_NO AND (T.EXPIRED_DATE IS NULL OR T.EXPIRED_DATE <= C.START_DT )';
-                  END IF;*/
+                  END IF;
                   
                                      
                   --V_CNT_CDR_OUT := 0;       
