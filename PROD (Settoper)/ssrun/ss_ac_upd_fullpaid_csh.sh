@@ -1,0 +1,2 @@
+sqlplus /nolog @/users/settoper/ssprocess/ss_ac_upd_fullpaid_csh.sql PAID_CANCEL >> /users/settoper/ssdata/aud_csh/log/ss_ac_upd_fullpaid_csh_paid.log
+#sqlplus /nolog @/users/settoper/ssprocess/ss_ac_upd_fullpaid_csh.sql WRITE_OFF   >> /users/settoper/ssdata/aud_csh/log/ss_ac_upd_fullpaid_csh_wf.log
